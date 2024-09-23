@@ -9,7 +9,7 @@ const Section5 = () => {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: easeInOut }} 
-                className="text-4xl sm:text-6xl text-primary font-jost font-bold text-center mt-8">
+                className="text-4xl sm:text-7xl text-primary font-jost font-bold text-center mt-8">
                 Retrouvez-nous
             </motion.h1>
             <div className="flex flex-col sm:grid sm:grid-cols-2 gap-8 mt-12 sm:mt-32 mb-12">

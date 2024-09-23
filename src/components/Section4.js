@@ -43,22 +43,41 @@ const Data = [
 
 const Section4 = () => {
     return (
-        <div 
-        initial={{ opacity: 0, y: 100 }}
-        animate={{opacity: 1, y:0 }}
-        transition={{ duration: 1, ease:easeInOut }} 
-        className="bg-cover bg-center min-h-screen" style={{ backgroundImage: `url(${Ble})`, backgroundPositionY: "top" }}>
-            <div className="grid grid-cols-1 xl:grid-cols-3 h-full mt-32 sm:mt-48">
-                {Data.map((item, index) => (
-                    <div key={index} className="flex flex-col items-center justify-center h-full w-auto bg-black bg-opacity-50 p-12">
-                        <img src={item.image} alt={item.title} className="sm:w-[70%] sm:h-[40%] object-cover rounded-lg" />
-                        <h1 className="text-3xl sm:text-6xl text-primary font-jost font-bold text-center mt-8">{item.title}</h1>
-                        <p className="text-accent font-jost text-xl sm:text-2xl mt-12 font-semibold max-w-[60%] text-center">{item.description}</p>
-                    </div>
-                ))}
+      <div className="relative min-h-screen">
+        {/* Arrière-plan avec brightness */}
+        <div
+          className="absolute inset-0 bg-cover bg-center brightness-[35%]"
+          style={{ backgroundImage: `url(${Ble})`, backgroundPositionY: "top" }}
+        ></div>
+  
+        {/* Contenu au-dessus du background */}
+        <div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: easeInOut }}
+          className="relative flex flex-wrap justify-center items-start space-x-12 gap-y-4 mt-32 sm:mt-48 z-10"
+        >
+          {Data.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-start w-full lg:w-1/4 p-4"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-40 object-cover min-h-[350px] rounded-xl"
+              />
+              <h1 className="text-2xl text-primary font-jost font-bold text-center mt-4">
+                {item.title}
+              </h1>
+              <p className="text-accent font-jost text-xl mt-4 font-semibold text-center">
+                {item.description}
+              </p>
             </div>
+          ))}
         </div>
+      </div>
     );
-};
-
-export default Section4;
+  };
+  
+  export default Section4;

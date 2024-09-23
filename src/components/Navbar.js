@@ -37,7 +37,7 @@ const Navbar = ({ isVisible }) => {
             <a href="/" className="ml-6 font-jost font-bold text-4xl text-[#591527] tracking-tighter">
                 <h1>
                     <span className="text-[#A6654E] font-jost font-bold text-4xl sm:text-4xl">L</span>a&nbsp;
-                    <span className="text-[#95776c] font-jost font-bold text-4xl sm:text-4xl">B</span>oulangerie
+                    <span className="text-[#A6654E] font-jost font-bold text-4xl sm:text-4xl">B</span>oulangerie
                 </h1>
             </a>
             <nav className="ml-auto flex items-center space-x-4 mr-6">
